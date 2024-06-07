@@ -69,7 +69,8 @@ const Header = () => {
   // Define your navigation items here
   const navItems = [
     { name: 'About Us', link: '/about' },
-    { name: 'Career', link: '/career' }
+    { name: 'Career', link: '/career' },
+    { name: 'IT Services', link: '/it-services' },
   ];
 
   return (
@@ -100,14 +101,6 @@ const Header = () => {
           ]}
         />
 
-        <Dropdown
-          title="IT Services"
-          items={[
-            { name: 'IT Service 1', link: '/it-service-1' },
-            { name: 'IT Service 2', link: '/it-service-2' },
-            { name: 'IT Service 3', link: '/it-service-3' },
-          ]}
-        />
       </nav>
 
       {/* Contact Us */}
@@ -152,14 +145,7 @@ const Header = () => {
          ]}
        />
      
-       <Dropdown
-         title="IT Services"
-         items={[
-           { name: 'IT Service 1', link: '/it-service-1' },
-           { name: 'IT Service 2', link: '/it-service-2' },
-           { name: 'IT Service 3', link: '/it-service-3' },
-         ]}
-       />
+     
      </div>
      
       )}

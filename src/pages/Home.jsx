@@ -50,30 +50,35 @@ export default function Home() {
   // Define your data structure
   const services = [
     {
+      id: 1,
       title: 'Vision Crafting',
       description: 'Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece.',
       imageSrc: '/images/vision-crafting.png',
       imageAlt: 'Vision Crafting Image'
     },
     {
+      id: 2,
       title: 'Aesthetic Engineering',
       description: 'Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece.',
       imageSrc: '/images/asthetic.png',
       imageAlt: 'Aesthetic Engineering Image'
     },
     {
+      id: 3,
       title: 'MVP Genesis',
       description: 'Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece.',
       imageSrc: '/images/asthetic.png',
       imageAlt: 'MVP Genesis Image'
     },
     {
+      id: 4,
       title: 'Prototype Symphony',
       description: 'Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece.',
       imageSrc: '/images/prototype.png',
       imageAlt: 'Prototype Symphony Image'
     },
     {
+      id: 5,
       title: 'SaaS & Software Development',
       description: 'Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece. Sculpting the blueprint for your digital masterpiece.',
       imageSrc: '/images/development.png',
@@ -179,6 +184,7 @@ export default function Home() {
             index % 2 === 0 ? (
               <RightSideImageService
                 key={index}
+                id={service.id}
                 title={service.title}
                 description={service.description}
                 imageSrc={service.imageSrc}
@@ -187,6 +193,7 @@ export default function Home() {
             ) : (
               <LeftSideImageService
                 key={index}
+                id={service.id}
                 title={service.title}
                 description={service.description}
                 imageSrc={service.imageSrc}

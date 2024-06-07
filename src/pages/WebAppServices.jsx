@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function WebAppServices() {
-  return (
-    <div>
-      we and app services
-    </div>
-  )
+  return <div>we and app services</div>;
 }

@@ -1,4 +1,12 @@
-const RightSideImageService = ({ title, description, imageSrc, imageAlt }) => (
+import { NavLink } from "react-router-dom";
+
+const RightSideImageService = ({
+  id,
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+}) => (
   <div className="flex flex-col items-center justify-center mb-10  ml-2 md:ml-[-5rem]">
     <div className="flex flex-col max-w-[39rem] w-full">
       <div className="md:grid w-full">
@@ -7,15 +15,15 @@ const RightSideImageService = ({ title, description, imageSrc, imageAlt }) => (
           <div className="md:hidden flex justify-center py-8 px-4">
             <div
               className="rounded-full border-2 border-rose-300 border-solid max-md:px-5 max-md:max-w-full relative"
-              style={{ width: '13rem', height: '13rem' }}
+              style={{ width: "13rem", height: "13rem" }}
             >
               <div
                 className="rounded-full overflow-hidden"
                 style={{
-                  height: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 <img
@@ -23,7 +31,11 @@ const RightSideImageService = ({ title, description, imageSrc, imageAlt }) => (
                   src={imageSrc}
                   className="ml-3 w-full h-full aspect-auto max-md:ml-2.5"
                   alt={imageAlt}
-                  style={{ objectFit: 'cover', maxHeight: '100%', maxWidth: '100%' }}
+                  style={{
+                    objectFit: "cover",
+                    maxHeight: "100%",
+                    maxWidth: "100%",
+                  }}
                 />
               </div>
             </div>
@@ -40,7 +52,15 @@ const RightSideImageService = ({ title, description, imageSrc, imageAlt }) => (
               <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-white transition-colors duration-300 ease-out group-hover:text-white">
                 <span className="absolute inset-0 w-full h-full px-5 py-3  bg-violet-500"></span>
                 <span className="absolute left-0 w-40 h-40 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-                <button className="relative whitespace-nowrap">Learn more</button>
+                <NavLink
+                  to={`/service-detail/${id}`}
+                  className="relative whitespace-nowrap"
+                >
+                  Learn more
+                </NavLink>
+                {/* <button  className="relative whitespace-nowrap">
+                  Learn more
+                </button> */}
               </span>
               <span
                 className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 group-hover:mb-0 group-hover:mr-0"
@@ -54,21 +74,21 @@ const RightSideImageService = ({ title, description, imageSrc, imageAlt }) => (
             <div
               className="flex flex-col justify-center px-8 py-8 w-full rounded-full border-2 border-rose-300 border-solid max-md:px-5 max-md:max-w-full relative bg-violet-50 justify-self-end"
               style={{
-                width: '22rem',
-                height: '22rem',
-                position: 'absolute',
-                top: '50%',
-                right: '-46%',
-                transform: 'translateY(-50%)',
+                width: "22rem",
+                height: "22rem",
+                position: "absolute",
+                top: "50%",
+                right: "-46%",
+                transform: "translateY(-50%)",
               }}
             >
               <div
                 className="rounded-full overflow-hidden"
                 style={{
-                  height: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 <img
@@ -76,7 +96,11 @@ const RightSideImageService = ({ title, description, imageSrc, imageAlt }) => (
                   src={imageSrc}
                   className="ml-3 w-full h-full aspect-auto max-md:ml-2.5"
                   alt={imageAlt}
-                  style={{ objectFit: 'cover', maxHeight: '100%', maxWidth: '100%' }}
+                  style={{
+                    objectFit: "cover",
+                    maxHeight: "100%",
+                    maxWidth: "100%",
+                  }}
                 />
               </div>
             </div>
