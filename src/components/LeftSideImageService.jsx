@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-const LeftSideImageService = ({ id, title, description, imageSrc, imageAlt }) => (
+const LeftSideImageService = ({
+  id,
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+}) => (
   <div className="flex flex-col items-center justify-center ml-2 md:ml-[-5rem] mb-10 ">
     <div className="flex flex-col max-w-[39rem] w-full md:ml-[12.5rem]">
       <div className="md:grid  w-full">
@@ -9,11 +15,9 @@ const LeftSideImageService = ({ id, title, description, imageSrc, imageAlt }) =>
           <div className="md:hidden flex justify-center py-8 px-4">
             <div
               className="rounded-full border-2 border-violet-300 border-solid max-md:px-5 max-md:max-w-full relative "
-              style={{ width: '13rem', height: '13rem' }}
+              style={{ width: "13rem", height: "13rem" }}
             >
-              <div
-                className="rounded-full overflow-hidden h-full flex items-center justify-center"
-              >
+              <div className="rounded-full overflow-hidden h-full flex items-center justify-center">
                 <img
                   loading="lazy"
                   src={imageSrc}
@@ -26,7 +30,7 @@ const LeftSideImageService = ({ id, title, description, imageSrc, imageAlt }) =>
 
           <div
             className="flex flex-col p-[3.5rem] px-8 md:items-end self-stretch my-auto w-full text-gray-900 bg-violet-300 rounded-3xl shadow-xl relative"
-            style={{ marginTop: '-0.5rem', marginBottom: '-0.5rem' }}
+            style={{ marginTop: "-0.5rem", marginBottom: "-0.5rem" }}
           >
             <div className="text-xl md:text-2xl font-bold md:w-[19rem] text-left">
               {title}
@@ -38,7 +42,10 @@ const LeftSideImageService = ({ id, title, description, imageSrc, imageAlt }) =>
               <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-white transition-colors duration-300 ease-out rounded-tl-lg rounded-br-lg group-hover:text-white">
                 <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-tl-lg rounded-br-lg bg-violet-500"></span>
                 <span className="absolute left-0 w-40 h-40 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-                <NavLink to={`/service-detail/${id}`} className="relative whitespace-nowrap">
+                <NavLink
+                  to={`/service-detail/${id}`}
+                  className="relative whitespace-nowrap"
+                >
                   Learn more
                 </NavLink>
                 {/* <button  className="relative whitespace-nowrap">
@@ -57,17 +64,15 @@ const LeftSideImageService = ({ id, title, description, imageSrc, imageAlt }) =>
             <div
               className="flex flex-col justify-center px-8 py-8 w-full rounded-full border-2 border-violet-300 border-solid max-md:px-5 max-md:max-w-full relative bg-violet-50 justify-self-start"
               style={{
-                width: '22rem',
-                height: '22rem',
-                position: 'absolute',
-                top: '50%',
-                left: '-46%',
-                transform: 'translateY(-50%)',
+                width: "22rem",
+                height: "22rem",
+                position: "absolute",
+                top: "50%",
+                left: "-46%",
+                transform: "translateY(-50%)",
               }}
             >
-              <div
-                className="rounded-full overflow-hidden h-full flex items-center justify-center"
-              >
+              <div className="rounded-full overflow-hidden h-full flex items-center justify-center">
                 <img
                   loading="lazy"
                   src={imageSrc}

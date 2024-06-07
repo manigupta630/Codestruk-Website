@@ -14,11 +14,11 @@ const ServicesAnimationCard = React.memo(({ image, title, description }) => {
       case "Discovery Phase":
         return `absolute hidden   ease-in-out ${
           showDescription ? "hidden" : "md:block"
-        }  top-[-25px] cursor-pointer right-[-90px] bottom-0`;
+        }  top-[-33px] cursor-pointer sm:right-[-0px] lg:right-[-90px] bottom-0`;
       case "Planning phase":
         return `absolute hidden ${
           showDescription ? "hidden" : "md:block"
-        }  top-[60px] cursor-pointer  ease-in-out right-[-65px] bottom-0`;
+        }  top-[60px] cursor-pointer  ease-in-out sm:right-[-0px] lg:right-[-65px] bottom-0`;
       default:
         return `absolute hidden ${
           showDescription ? "hidden" : "md:block"
@@ -58,14 +58,14 @@ const ServicesAnimationCard = React.memo(({ image, title, description }) => {
   }, [timeoutId]);
   return (
     <div
-      className={`flex flex-col  pb-8 relative  justify-center  gap-12 md:flex-row ${
+      className={`flex flex-col  pb-8 relative  justify-center  md:gap-12 md:flex-row ${
         showDescription ? "items-start" : "items-center"
       }  w-full md:justify-start  rounded-lg group`}
     >
       {showDescription && (
         <div
           onClick={handleShowDesc}
-          className="close-button md:hidden absolute top-0  right-5 w-10 h-10 flex items-center text-sm justify-center bg-purple-200 rounded-full"
+          className="close-button md:hidden absolute top-[-50px]  right-5 w-10 h-10 flex items-center text-sm justify-center bg-purple-200 rounded-full"
         >
           X
         </div>
@@ -84,9 +84,9 @@ const ServicesAnimationCard = React.memo(({ image, title, description }) => {
         <img
           src={clickHerePng}
           alt="Click Here"
-          className={`absolute ${
-            showDescription ? "hidden md:hidden" : "block"
-          } top-[-40px] right-0 bottom-0`}
+          className={`absolute md:hidden ${
+            showDescription ? "hidden " : "block"
+          } top-[-50px] right-1/2 left-1/2 bottom-0`}
         />
         {/* <div className="absolute hidden md:block left-1/2  h-full border-l-2 border-dotted border-[#E5DBFC] duration-500 transform -translate-x-1/2 z-0"></div> */}
       </div>

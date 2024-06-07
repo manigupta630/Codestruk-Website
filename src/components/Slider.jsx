@@ -1,21 +1,42 @@
-import React, { useState } from 'react';
-import ReactStars from 'react-stars';
-import { BsPlayFill } from 'react-icons/bs';
+import React, { useState } from "react";
+import ReactStars from "react-stars";
+import { BsPlayFill } from "react-icons/bs";
 
 const VideoOverlay = ({ onClick }) => (
   <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-    <button onClick={onClick} className="text-white transition duration-300 ease-in-out transform hover:scale-110">
+    <button
+      onClick={onClick}
+      className="text-white transition duration-300 ease-in-out transform hover:scale-110"
+    >
       <BsPlayFill size={64} />
     </button>
   </div>
 );
 
 const Modal = ({ isOpen, onClose, videoSrc }) => (
-  <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50 ${isOpen ? 'block' : 'hidden'}`}>
+  <div
+    className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50 ${
+      isOpen ? "block" : "hidden"
+    }`}
+  >
     <div className="relative w-3/4 h-3/4 max-w-6xl max-h-4xl">
-      <button onClick={onClose} className="absolute top-[-2rem] right-[-2rem] text-xl text-white hover:text-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+      <button
+        onClick={onClose}
+        className="absolute top-[-2rem] right-[-2rem] text-xl text-white hover:text-gray-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M6 18L18 6M6 6l12 12"
+          />
         </svg>
       </button>
       <iframe
@@ -59,7 +80,7 @@ const Slider = ({ slides }) => {
                       count={5}
                       value={slides[currentSlide].rating}
                       size={24}
-                      color2={'#ffd700'}
+                      color2={"#ffd700"}
                       edit={false}
                     />
                   </div>
@@ -79,7 +100,9 @@ const Slider = ({ slides }) => {
                       <div
                         key={index}
                         onClick={() => handleDotClick(index)}
-                        className={`shrink-0 w-2.5 h-2.5 rounded-full cursor-pointer ${index === currentSlide ? 'bg-violet-400' : 'bg-white'}`}
+                        className={`shrink-0 w-2.5 h-2.5 rounded-full cursor-pointer ${
+                          index === currentSlide ? "bg-violet-400" : "bg-white"
+                        }`}
                       />
                     ))}
                   </div>
@@ -93,15 +116,27 @@ const Slider = ({ slides }) => {
                   src={slides[currentSlide].image.src}
                   className="w-full h-full aspect-auto rounded-tr-2xl rounded-br-2xl"
                   alt="videoImage"
-                  style={{ objectFit: 'cover', maxHeight: '100%', maxWidth: '100%' }}
+                  style={{
+                    objectFit: "cover",
+                    maxHeight: "100%",
+                    maxWidth: "100%",
+                  }}
                 />
-                {slides[currentSlide].video && <VideoOverlay onClick={openModal} />}
+                {slides[currentSlide].video && (
+                  <VideoOverlay onClick={openModal} />
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
-      {isModalOpen && <Modal isOpen={isModalOpen} onClose={closeModal} videoSrc={slides[currentSlide].video.src} />}
+      {isModalOpen && (
+        <Modal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          videoSrc={slides[currentSlide].video.src}
+        />
+      )}
     </div>
   );
 };

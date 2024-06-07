@@ -94,7 +94,7 @@ const Services = () => {
             </p>
           </section>
 
-          <section className="grid  relative text-2xl h-full md:text-5xl w-full font-bold grid-cols-1   gap-8 ">
+          <section className="grid  relative text-2xl h-full md:text-5xl w-full font-bold grid-cols-1   gap-12 pt-10 ">
             {/* <div className="flex flex-col  relative justify-center md:flex-row  items-center w-full md:justify-between  p-6 rounded-lg "> */}
             {card?.map((cardDetails) => (
               <ServicesAnimationCard
