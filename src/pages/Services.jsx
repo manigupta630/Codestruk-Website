@@ -1,14 +1,23 @@
 import React from "react";
 import mainBg from "../assets/bg-1.png";
-import discoveryPhaseBg from "../assets/discovery_phase.png";
-import scopingPhaseBg from "../assets/scopingphase.png";
-import planningPhaseBg from "../assets/planning_phase.png";
+import discoveryPhaseBg from "../assets/Artwork 1.png";
+import scopingPhaseBg from "../assets/Artwork 2.png";
+import planningPhaseBg from "../assets/Artwork 3.png";
 import hoverHerePng from "../assets/hover-here.png";
 import hoverHereDiscPng from "../assets/indicator-dic.png";
 import hoverHerePlanPng from "../assets/indicator-plan.png";
-
+import lightBulbIcon from "../assets/bulb.png";
 import clickHerePng from "../assets/clickhere.png";
+import planeIcon from "../assets/sendicon.png";
+import Breadcrumb from "../components/services/BreadScrumbIcon";
 import ServicesAnimationCard from "../components/services/ServicesAnimationCard";
+import Contact from "../components/services/Contact";
+
+const breadcrumbItems = [
+  { text: "Codestruck", link: "/codestruck" },
+  { text: "Service", link: "/codestruck/service" },
+  { text: "Product-Shopping", link: "/codestruck/service/product-shopping" },
+];
 
 const Services = () => {
   const card = [
@@ -41,15 +50,18 @@ const Services = () => {
     },
   ];
   return (
-    <div className="bg-purple-50  min-h-screen">
-      <main className=" mx-auto py-8 px-5">
-        <div className="flex   justify-center items-center  max-w-[800px] mx-auto gap-5 py-8 ">
+    <div className="bg-purple-50  max-w-[1440px] mx-auto min-h-screen">
+      <div className="mx-auto relative p-5 w-fit">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
+      <main className="max-w-[931px] mx-auto py-8 px-5">
+        <div className="flex   justify-center items-center  max-w-full mx-auto gap-5 py-8 ">
           {/* <h1 className="text-4xl font-bold ">Product</h1> */}
           <img src={mainBg} alt="Product Scoping" className="mx-auto w-auto" />
           {/* <h1 className="text-4xl font-bold ">Scoping</h1> */}
         </div>
 
-        <div className="flex flex-col max-w-[1020px]  mx-auto">
+        <div className="flex flex-col w-full  mx-auto">
           <section className="text-gray-700 flex flex-col gap-2 text-left mb-10">
             <p>
               As a team of engineers and creative designers, we know the
@@ -82,7 +94,7 @@ const Services = () => {
             </p>
           </section>
 
-          <section className="grid  relative text-2xl md:text-5xl w-full font-bold grid-cols-1   gap-0 mb-12">
+          <section className="grid  relative text-2xl h-full md:text-5xl w-full font-bold grid-cols-1   gap-8 ">
             {/* <div className="flex flex-col  relative justify-center md:flex-row  items-center w-full md:justify-between  p-6 rounded-lg "> */}
             {card?.map((cardDetails) => (
               <ServicesAnimationCard
@@ -91,6 +103,7 @@ const Services = () => {
                 description={cardDetails.description}
               />
             ))}
+            <div className="absolute hidden md:block left-[125px]  h-full border-l-2 border-dotted border-[#E5DBFC] duration-500 transform -translate-x-1/2 z-0"></div>
           </section>
 
           <section className="bg-white h-auto relative z-3  rounded-lg  mb-12">
@@ -119,53 +132,84 @@ const Services = () => {
             </div>
           </section>
 
-          <section className="bg-white p-6 rounded-lg ">
-            <h2 className="text-2xl font-bold mb-4">
+          {/* <section className="bg-white relative  rounded-lg ">
+            <h2 className="text-3xl font-bold mb-4 text-center py-5 text-[#813A96]">
               Write to us your craziest ideas!
             </h2>
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-gray-700">
-                  Hello CodentTide 👋
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full border-gray-300 rounded-md"
-                  placeholder="I am"
-                />
-              </div>
-              <div>
-                <label htmlFor="idea" className="block text-gray-700">
-                  and I'm looking for assistance to work with
-                </label>
-                <textarea
-                  id="idea"
-                  rows="3"
-                  className="w-full border-gray-300 rounded-md"
-                  placeholder="I have this crazy idea that I want to work upon. Here's the gist of the idea"
-                ></textarea>
-              </div>
-              <div>
-                <label htmlFor="contact" className="block text-gray-700">
-                  Contact me at
-                </label>
-                <input
-                  type="text"
-                  id="contact"
-                  className="w-full border-gray-300 rounded-md"
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-purple-600 text-white px-6 py-2 rounded-md"
-              >
-                Submit Message
-              </button>
-            </form>
-          </section>
+            <div className="absolute w-full pb-5 h-full overflow-hidden max-h-[400px] flex flex-col justify-between gap-5">
+              <div className="h-[2px] w-full bg-gray-400 opacity-50"></div>
+
+              <div className="h-[2px] w-full bg-gray-400 opacity-50"></div>
+            </div>
+            <div className="relative z-2">
+              <form className="space-y-4 flex flex-col gap-0">
+                <div className="flex  flex-col gap-2">
+                  <div className="relative">
+                    <label htmlFor="name" className="block px-10 text-gray-700">
+                      Hello CodentTide 👋
+                    </label>
+                    <div className="h-[2px] absolute w-full bg-gray-400 opacity-50"></div>
+                  </div>
+
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-10 outline-none border-gray-300 bg-transparent rounded-md"
+                      placeholder="I am"
+                    />
+                    <div className="h-[2px] absolute w-full bg-gray-400 opacity-50"></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="relative">
+                    <label htmlFor="idea" className="block px-10 text-gray-700">
+                      I have this insane idea that I want to work upon. Here’s
+                      the gist of the idea
+                    </label>
+                    <div className="h-[2px] absolute w-full bg-gray-400 opacity-50"></div>
+                  </div>
+                  <div className="relative pt-3">
+                    <textarea
+                      id="idea"
+                      rows="3"
+                      className="w-full px-10 py-0 outline-none border-gray-300 bg-transparent rounded-md"
+                      placeholder="About what you’re building in brief"
+                    ></textarea>
+                    <div className="h-[2px] absolute w-full bg-gray-400 opacity-50"></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="relative pt-20">
+                    <label
+                      htmlFor="contact"
+                      className="block px-10 text-gray-700"
+                    >
+                      Contact me at
+                    </label>
+                    <div className="h-[2px] absolute w-full bg-gray-400 opacity-50"></div>
+                  </div>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="contact"
+                      className="w-full px-10 outline-none border-gray-300 bg-transparent rounded-md"
+                    />
+                  </div>
+                  <div className="h-[2px] absolute w-full bg-gray-400 opacity-50"></div>
+                </div>
+                <button
+                  type="submit"
+                  className="bg-purple-600 text-white px-6 py-2 bg-transparent rounded-md"
+                >
+                  Submit Message
+                </button>
+              </form>
+            </div>
+          </section> */}
         </div>
       </main>
+      <Contact />
     </div>
   );
 };
