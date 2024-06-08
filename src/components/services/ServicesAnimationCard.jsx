@@ -78,7 +78,12 @@ const ServicesAnimationCard = React.memo(({ image, title, description }) => {
             showDescription ? "h-fit bg-transparent" : "bg-[rgb(195,222,255)]"
           } z-[10] group-hover:bg-transparen flex items-center justify-center z- rounded-full`}
         >
-          <img src={image} alt={title} className="max-w-[200px] " />
+          <img
+            onClick={handleShowDesc}
+            src={image}
+            alt={title}
+            className="max-w-[200px] "
+          />
         </div>
 
         <img

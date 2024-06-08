@@ -103,7 +103,7 @@ const Services = () => {
                 description={cardDetails.description}
               />
             ))}
-            <div className="absolute hidden md:block left-[125px]  h-full border-l-2 border-dotted border-[#E5DBFC] duration-500 transform -translate-x-1/2 z-0"></div>
+            <div className="absolute hidden md:block left-[125px] top-[50px]  h-full border-l-2 border-dotted border-[#E5DBFC] duration-500 transform -translate-x-1/2 z-0"></div>
           </section>
 
           <section className="bg-white h-auto relative z-3  rounded-lg  mb-12">
