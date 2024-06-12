@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:ml-16 grid grid-cols-3 leading-10">
-            <div className="font-bold">
+            {/* <div className="font-bold">
               <div className="px-4 block">
                 Product
               </div>
@@ -64,29 +64,16 @@ const Footer = () => {
               <NavLink to="/events" className="text-violet-600 px-4 block">
                 Releases
               </NavLink>
-            </div>
+            </div> */}
             <div className="font-bold">
-              <div className="px-4 block">
-                Resources
-              </div>
+             
               <NavLink to="/store" className="text-violet-600 px-4 block">
                 Blog
               </NavLink>
               <NavLink to="/vlog" className="text-violet-600 px-4 block">
                 Newsletter
               </NavLink>
-              <NavLink to="/blog" className="text-violet-600 px-4 block">
-                Events
-              </NavLink>
-              <NavLink to="/contact" className="whitespace-nowrap text-violet-600 px-4 block">
-                Help center
-              </NavLink>
-              <NavLink to="/leagueinfo" className="text-violet-600 px-4 block">
-                Tutorials
-              </NavLink>
-              <NavLink to="/leagueteam" className="text-violet-600 px-4 block">
-                Support
-              </NavLink>
+            
             </div>
           </div>
 

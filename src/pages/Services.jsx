@@ -50,18 +50,16 @@ const Services = () => {
     },
   ];
   return (
-    <div className="bg-purple-50  max-w-[1440px] mx-auto min-h-screen">
+    <div className="max-w-[1440px] mx-auto min-h-screen">
       <div className="mx-auto relative p-5 w-fit">
         <Breadcrumb items={breadcrumbItems} />
       </div>
-      <main className="max-w-[931px] mx-auto py-8 px-5">
-        <div className="flex   justify-center items-center  max-w-full mx-auto gap-5 py-8 ">
-          {/* <h1 className="text-4xl font-bold ">Product</h1> */}
+      <main className="max-w-[931px] mx-auto  px-5">
+        <div className="flex   justify-center items-center  max-w-full mx-auto gap-5  ">
           <img src={mainBg} alt="Product Scoping" className="mx-auto w-auto" />
-          {/* <h1 className="text-4xl font-bold ">Scoping</h1> */}
         </div>
 
-        <div className="flex flex-col w-full  mx-auto">
+        <div className="flex flex-col w-full font-sen mx-auto">
           <section className="text-gray-700 flex flex-col gap-2 text-left mb-10">
             <p>
               As a team of engineers and creative designers, we know the
@@ -107,7 +105,7 @@ const Services = () => {
           </section>
 
           <section className="bg-white h-auto relative z-3  rounded-lg  mb-12">
-            <div className="p-10 w-full  border-b-2 border-dotted  border-[#813A96] transform ">
+            <div className="p-10 w-full  border-b-2 border-dashed  border-[#813A96] transform ">
               <h2 className="text-2xl md:text-4xl font-bold  text-[#813A96]">
                 WHY IS PRODUCT SCOPING SO ESSENTIAL?
               </h2>

@@ -58,14 +58,14 @@ const ServicesAnimationCard = React.memo(({ image, title, description }) => {
   }, [timeoutId]);
   return (
     <div
-      className={`flex flex-col  pb-8 relative  justify-center  md:gap-12 md:flex-row ${
+      className={`flex flex-col   pb-8 relative  justify-center  md:gap-12 md:flex-row ${
         showDescription ? "items-start" : "items-center"
       }  w-full md:justify-start  rounded-lg group`}
     >
       {showDescription && (
         <div
           onClick={handleShowDesc}
-          className="close-button md:hidden absolute top-[-50px]  right-5 w-10 h-10 flex items-center text-sm justify-center bg-purple-200 rounded-full"
+          className="close-button md:hidden absolute top-[-50px]  right-5 w-10 h-10 flex items-center text-sm justify-center bg-[#E5DBFC] rounded-full"
         >
           X
         </div>
@@ -74,8 +74,8 @@ const ServicesAnimationCard = React.memo(({ image, title, description }) => {
         className={`relative  rounded-full   mx-auto md:mx-0 flex items-center justify-center `}
       >
         <div
-          className={`relative   w-[250px] h-[250px]  ${
-            showDescription ? "h-fit bg-transparent" : "bg-[rgb(195,222,255)]"
+          className={`relative   w-[250px] h-[250px] font-sen  ${
+            showDescription ? "h-fit bg-transparent" : "bg-[#E5DBFC]"
           } z-[10] group-hover:bg-transparen flex items-center justify-center z- rounded-full`}
         >
           <img
@@ -100,7 +100,7 @@ const ServicesAnimationCard = React.memo(({ image, title, description }) => {
         onMouseLeave={handleMouseLeave}
         className={`relative ${
           showDescription ? "bg-white" : ""
-        } group-hover:bg-whit flex w-fit max-w-[450px]    py-5 my-2 flex-col text-sm bg-transparent   rounded-md gap-0`}
+        } group-hover:bg-white flex w-fit max-w-[450px]    py-5 my-2 flex-col text-sm bg-transparent   rounded-md gap-0`}
       >
         <h3
           onClick={handleShowDesc}

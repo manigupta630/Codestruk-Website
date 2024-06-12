@@ -5,7 +5,7 @@ import scrumb from "../../assets/scrumb.svg";
 
 const Breadcrumb = ({ items }) => {
   return (
-    <nav aria-label="breadcrumb" className="relative w-full">
+    <nav aria-label="breadcrumb" className="relative  w-full">
       <img src={scrumb} className="w-full" alt="Breadcrumb Background" />
       <div className="left-[-20px] relative w-full  mx-auto">
         <ol className="flex  w-[calc(100%+50px)] gap-5 justify-between items-center">
@@ -13,11 +13,11 @@ const Breadcrumb = ({ items }) => {
             <Link
               key={index}
               to={item.link}
-              className={`
+              className={`font-inter uppercase
               ${index === 1 ? "pl-[25px]" : ""}
               ${
-                items.length - 1 === index ? "text-blue-500" : ""
-              } text-sm font-bold w-fit hover:underline`}
+                items.length - 1 === index ? "text-[#7F56D9]" : ""
+              } text-sm font-bold w-fit`}
             >
               {item.text}
             </Link>
